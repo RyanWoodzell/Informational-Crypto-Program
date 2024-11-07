@@ -16,7 +16,7 @@ The program then outputs various facts about the cryptocurrency to the user usin
 
   - This project was created in my first computer science college course, Intro to Computing. It was my first experience with Python.
   - This was also my first time working with web API's and JSON data. JSON was tough to figure out at first, but not too bad once I learned how to access certain data.
-  - This was also my first introduction to classes and methods. I have grown a long way from this program, and have noticed a lot that I can implement to improve the program.
+  - This was my first introduction to classes and methods. I have grown a long way from this program, and have noticed a lot that I can implement to improve the program.
 
 ## The Future!
 
