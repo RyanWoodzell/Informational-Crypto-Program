@@ -27,6 +27,8 @@ The program then presents relevant information on the cryptocurrency and gives t
 
 ![image](https://github.com/user-attachments/assets/d9550bdf-6fd6-4ac8-a5a7-4667f2db89e5)
 
+The user can also ask for a demonstration of the highest or lowest increases over certain periods of time. 
+
 ## Lessons Learned
 
 - **Python Fundamentals**: This project was my first experience with Python, created during my *Intro to Computing* course.
