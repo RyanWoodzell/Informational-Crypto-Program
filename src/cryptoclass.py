@@ -25,7 +25,7 @@ class cryptoInfo:
     try:
       self.response = self.session.get(self.url, params=self.parameters)
       self.data = json.loads(self.response.text)
-      #print(self.data)
+      print(self.data)
     except (ConnectionError, Timeout, TooManyRedirects) as e:
       print(e)
 
@@ -53,6 +53,24 @@ class cryptoInfo:
     if found==0:
       print("This Cryptocurrency does not exist.")
   
+  def bubbleSortLow(self, arrayNames, arrayValue):
+    n=len(arrayNames)
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+          if arrayValue[j] > arrayValue[j+1]:
+            arrayValue[j], arrayValue[j+1] = arrayValue[j+1], arrayValue[j]
+            arrayNames[j], arrayNames[j+1] = arrayNames[j+1], arrayNames[j]
+    return [arrayNames, arrayValue]
+
+  def bubbleSortHigh(self, arrayNames, arrayValue):
+    n=len(arrayNames)
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+          if arrayValue[j] < arrayValue[j+1]:
+            arrayValue[j], arrayValue[j+1] = arrayValue[j+1], arrayValue[j]
+            arrayNames[j], arrayNames[j+1] = arrayNames[j+1], arrayNames[j]
+    return [arrayNames, arrayValue]
+  
   def findHighestDailyChange(self):
 
     #necessary fields
@@ -71,12 +89,9 @@ class cryptoInfo:
       names.append(key.get('name'))
 
     #bubble sorts the list from highest to lowest
-    n=len(pctChange)
-    for i in range(n-1):
-      for j in range(0, n-i-1):
-        if pctChange[j]< pctChange[j+1]:
-          pctChange[j], pctChange[j+1] = pctChange[j+1], pctChange[j]
-          names[j], names[j+1] = names[j+1], names[j]
+    sorted = self.bubbleSortHigh(names,pctChange)
+    pctChange = sorted[1]
+    names=sorted[0]
 
     #prints the top 5 highest percent changes
     while index<5:
@@ -103,12 +118,9 @@ class cryptoInfo:
     n=len(pctChange)
 
     #bubble sorts the lists from lowest to highest
-    for i in range(n-1):
-      for j in range(0, n-i-1):
-        if pctChange[j]> pctChange[j+1]:
-          pctChange[j], pctChange[j+1] = pctChange[j+1], pctChange[j]
-          names[j], names[j+1] = names[j+1], names[j]
-
+    sorted = self.bubbleSortLow(names,pctChange)
+    pctChange = sorted[1]
+    names=sorted[0]
     #prints the 5 lowest percent changes
     while index<5:
       print(b,".", names[index], " ", pctChange[index])
@@ -133,13 +145,9 @@ class cryptoInfo:
         names.append(key.get('name'))
 
       #bubble sorts the list from highest to lowest
-      n=len(pctChange)
-      for i in range(n-1):
-        for j in range(0, n-i-1):
-          if pctChange[j]< pctChange[j+1]:
-            pctChange[j], pctChange[j+1] = pctChange[j+1], pctChange[j]
-            names[j], names[j+1] = names[j+1], names[j]
-
+      sorted = self.bubbleSortHigh(names,pctChange)
+      pctChange = sorted[1]
+      names=sorted[0]
       #prints the top 5 highest percent changes
       while index<5:
         b=1
@@ -166,16 +174,12 @@ class cryptoInfo:
       n=len(pctChange)
 
       #bubble sorts the list from lowest to highest
-      for i in range(n-1):
-        for j in range(0, n-i-1):
-          if pctChange[j]> pctChange[j+1]:
-            pctChange[j], pctChange[j+1] = pctChange[j+1], pctChange[j]
-            names[j], names[j+1] = names[j+1], names[j]
-            
+      sorted = self.bubbleSortLow(names,pctChange)
+      pctChange = sorted[1]
+      names=sorted[0]
+      
       #prints the top 5 lowest percent changes
       while index<5:
         print(b,".", names[index], " ", pctChange[index])
         index+=1
         b+=1
-  
-

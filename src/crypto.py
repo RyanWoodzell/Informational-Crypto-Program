@@ -13,14 +13,15 @@ def main():
      #user interface
     print("="*20)
     print("To find information about a specific Cryptocurrency, enter crypto name.")
-    print("Press 1 for highest daily percent change")
+    print("Press 1 for the highest daily percent change")
     print("Press 2 for the lowest daily percent change")
-    print("Press 3 for highest 3 month percent change.")
-    print("Press 4 for lowest 3 month percent change. ")
+    print("Press 3 for the highest 3 month percent change.")
+    print("Press 4 for the lowest 3 month percent change. ")
     print("Press 5 to end program")
     a=str(input("Input: "))
 
     #if statements that call certain functions from the class cryptoInfo
+    
     if a == "5":
       print("Have a Great Day!")
       break
