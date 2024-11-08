@@ -32,7 +32,7 @@ The user can also ask for a demonstration of the highest or lowest increases ove
 
 ## Lessons Learned
 
-- **Python Fundamentals**: This project was my first experience with Python, created during my *Intro to Computing* course.
+- **Python Fundamentals**: This project was my first experience with Python, created December 2023 during my *Intro to Computing* course.
 - **Working with APIs**: I learned how to interact with web APIs and work with JSON data. While JSON formatting initially posed challenges, I quickly gained familiarity with accessing specific data elements.
 - **Object-Oriented Programming (OOP)**: This project introduced me to classes and methods, building a foundation for further development in software engineering. Reflecting on this experience, I see many areas for improvement and refinement in the program.
 
