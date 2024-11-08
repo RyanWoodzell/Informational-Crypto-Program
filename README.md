@@ -19,7 +19,7 @@ This Python program leverages the CoinMarketCap API to provide comprehensive dat
 
 ## Example Usage
 
-When the program is executed, it pulls data from the CoinMarketCap API. Users are prompted to enter the name of a cryptocurrency they wish to view. For example, if a user enters “Bitcoin,” the program retrieves and displays various statistics on Bitcoin:
+When the program is executed, it pulls data from the CoinMarketCap API. Users are prompted to enter the name of a cryptocurrency they wish to view. For example, if a user enters “Bitcoin” the program retrieves and displays various statistics on Bitcoin:
 
 ![image](https://github.com/user-attachments/assets/03f29f95-68a1-4207-8836-5ae2f51cf6bc)
 
