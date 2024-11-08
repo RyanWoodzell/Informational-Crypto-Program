@@ -25,7 +25,7 @@ class cryptoInfo:
     try:
       self.response = self.session.get(self.url, params=self.parameters)
       self.data = json.loads(self.response.text)
-      print(self.data)
+      #print(self.data)
     except (ConnectionError, Timeout, TooManyRedirects) as e:
       print(e)
 
